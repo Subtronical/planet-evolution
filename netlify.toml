@@ -1,0 +1,14 @@
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+    X-Content-Type-Options = "nosniff"
+    Content-Security-Policy = "default-src 'self' 'unsafe-inline' 'unsafe-eval' blob: data: https://fonts.googleapis.com https://fonts.gstatic.com https://www.solarsystemscope.com https://upload.wikimedia.org https://cdnjs.cloudflare.com https://apod.nasa.gov https://www.nasa.gov https://www.esa.int"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
